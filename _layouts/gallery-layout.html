@@ -1,0 +1,26 @@
+---
+layout: simple-default
+title: Gallery
+description: An Android phone, some filter apps, and my eyes.
+set_title: true
+---
+
+<!-- The main content area -->
+<div class="posts">
+    <div class="grid-xlarge">
+      <div class="posts__container" itemscope itemtype="http://schema.org/Blog" data-columns>
+  
+        {% for post in paginator.posts %}
+            <!-- The tag below includes the markup for each post - partials/post-card.html -->
+            {% include photo-card.html %}
+        {% endfor %}
+      </div>
+    </div>
+  
+</div>
+
+{% if paginator.next_page %}
+  <div class="posts__pagination">
+    <span class="posts__next">Load More</span>
+  </div>
+{% endif %}

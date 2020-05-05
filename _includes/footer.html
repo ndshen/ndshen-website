@@ -1,0 +1,53 @@
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                Built with <a target="_blank" href="https://jekyllrb.com/">Jekyll.</a>
+                Theme inspired by <a target="_blank" href="https://github.com/samesies/barber-jekyll">Barber</a> & <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish</a>. 
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+{% include contact.html %}
+
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+<script src="{{ site.baseurl }}/assets/js/popup.js"></script>
+<script src="{{ site.baseurl }}/assets/js/formcarry.js"></script>
+<script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
+<script src="{{ site.baseurl }}/assets/js/pageTransition.js"></script>
+
+{% if site.lazyimages == "enabled" %}
+<script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
+{% endif %}
+
+<script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script> 
+
+{% if page.layout == 'post' %}
+<script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
+{% endif %}
+
+{% if page.title == 'gallery' %}
+    {% if paginator.next_page %}
+    <script>
+        var maxPages = parseInt('{{ paginator.total_pages }}');
+    </script>
+    {% endif %}
+<script src="{{site.baseurl}}/assets/js/infiniteScroll.js"></script>
+<script src="{{site.baseurl}}/assets/js/salvattore.min.js"></script>
+{% endif %}
+

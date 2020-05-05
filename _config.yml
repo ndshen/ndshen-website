@@ -1,0 +1,76 @@
+# Site
+name: "ndshen"
+title: "NDSHEN"
+logo: 'assets/images/wild-life.png'
+favicon: 'assets/images/wild-life.png'
+baseurl: ""
+baseurl-blog: /Blog
+google_analytics: 'UA-46278016-1'
+disqus: 'demowebsite'
+include: ["_pages"]
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, package.json]
+
+# Plugins
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+permalink: /:title/
+pagination:
+  enabled: true
+  per_page: 6
+  parmalink: /page/:num/
+  sort_field: 'date'
+  sort_reverse: true
+  title: ':title'
+
+#Autopages
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    layouts:
+      - 'gallery-layout.html'
+    title: ':tag'
+    permalink: '/:tag'
+    slugify:
+      mode: default
+      cased: true
+
+
+# Contact settings
+contact_img: /assets/images/1521957069411.jpg
+formcarry: https://formcarry.com/s/R70JECPsjK5g
+
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: "ca-pub-3412143450191416"
+adsense-data-ad-slot: "1363087678"
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+

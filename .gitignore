@@ -1,0 +1,7 @@
+_site/
+.DS_Store
+*.swp
+.sass-cache
+*~
+node_modules/
+.jekyll-cache/

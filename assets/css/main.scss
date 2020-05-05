@@ -1,0 +1,30 @@
+---
+# Add a comment to make this file sass-y.
+# Change this file for any custom CSS.
+---
+
+/* We need to add display:inline in order to align the '>>' of the 'read more' link */
+.post-excerpt p {
+	display:inline;
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+	"syntax",
+	"pageTransition",
+	"gallery/config",
+	"gallery/extends-type",
+	"gallery/extends",
+	// "gallery/mixins-grid",
+	"gallery/mixins-type",
+	// "gallery/mixins-animations",
+	"gallery/posts",
+	"gallery/decor",
+	"gallery/helpers",
+	"gallery/helpers-grid",
+	"gallery/animations-keyframes",
+	"contact",
+	"forms",
+	"form",
+	"popup"
+;
