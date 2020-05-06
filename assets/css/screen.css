@@ -11,6 +11,10 @@ License: https://www.wowthemes.net/freebies-license/
     padding: 1rem 0rem;
 }
 
+#my-info h5{
+    margin-bottom: 0.5em;
+}
+
 #personal-social-info a {
     font-size: 30px;
     margin: 5px;
