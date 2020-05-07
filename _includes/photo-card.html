@@ -2,7 +2,13 @@
     <a class="posts__link"  itemprop="url">
       {% if post.image %}
         <figure class="posts__img">
+          {% if post.image-small %} 
+          <a href="{{ site.baseurl }}/{{ post.image }}" class="progressive replace">
+            <img src="{{ site.baseurl }}/{{ post.image | replace: '.jpg', '-min.jpg' }}" class="preview" alt="image" />
+          </a>
+          {% else %}
           <img src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}" data-aos="fade-in" itemprop="image"/>
+          {% endif %}
         </figure>
       {% endif %}
       <div>
