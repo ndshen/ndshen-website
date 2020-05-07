@@ -134,4 +134,9 @@ const PageTransition = (() => {
     };
   })();
 
-  PageTransition.init();
+
+// ----------------------------------------------
+// Exports
+// ----------------------------------------------
+export default PageTransition;
+  
