@@ -127,16 +127,3 @@ if (raf) raf(function () {
 	window.setTimeout(loadDeferredStyles, 0);
 });
 else window.addEventListener('load', loadDeferredStyles);
-
-$(() => {
-
-  AOS.init({
-    duration: 600,
-    easing: 'ease-in-out',
-    once: true
-  });
-  if ($('#form').length) {
-    Formcarry.init();
-    Popup.init();
-  }
-});

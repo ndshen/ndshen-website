@@ -4,7 +4,7 @@ title:  "Create my own Jekyll Website"
 author: ndshen
 categories: [tutorial]
 image: assets/images/13.jpg
-featured: true
+featured: false
 tags:
   - article
 ---

@@ -2,8 +2,10 @@
     <a class="posts__link"  itemprop="url">
       {% if post.image %}
         <figure class="posts__img">
-          {% if site.lazyimages == 'enabled' %}
-          <img class = "lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}" data-aos="fade-in" itemprop="image"/>
+          {% if post.image-small %} 
+          <a href="{{ site.baseurl }}/{{ post.image }}" class="progressive replace">
+            <img src="{{ site.baseurl }}/{{ post.image | replace: '.jpg', '-min.jpg' }}" class="preview" alt="image" />
+          </a>
           {% else %}
           <img src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}" data-aos="fade-in" itemprop="image"/>
           {% endif %}
