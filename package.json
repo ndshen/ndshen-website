@@ -25,6 +25,7 @@
     "start": "bundle exec jekyll serve",
     "build": "bundle exec jekyll build",
     "deploy": "gulp default && bundle exec jekyll build",
+    "serve": "gulp default && bundle exec jekyll serve --port 5001 --trace",
     "gulp": "gulp"
   },
   "repository": {

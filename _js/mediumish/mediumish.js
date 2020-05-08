@@ -80,11 +80,12 @@ jQuery(document).ready(function($){
     }, 250);
 
     function hasScrolled() {
-        var st = $(this).scrollTop();
+        var st = $(window).scrollTop();
         
         // Make sure they scroll more than delta
-        if(Math.abs(lastScrollTop - st) <= delta)
+        if(Math.abs(lastScrollTop - st) <= delta){
             return;
+        }
 
         // If they scrolled down and are past the navbar, add class .nav-up.
         // This is necessary so you never see what is "behind" the navbar.
