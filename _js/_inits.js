@@ -2,6 +2,7 @@
 // Imports
 // ----------------------------------------------
 // import $ from 'jquery';
+import './progressive-image.js'
 import AOS from 'aos';
 import Formcarry from './components/formcarry.js';
 import InfiniteScroll from './components/infiniteScroll.js';
@@ -10,6 +11,9 @@ import Popup from './components/popup.js';
 
 import './mediumish/ie10-viewport-bug-workaround.js';
 import './mediumish/mediumish.js';
+
+
+
 
 // ----------------------------------------------
 // Inits
